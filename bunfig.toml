@@ -1,0 +1,5 @@
+# Working in this folder drops whatever the agent built into `projects/`. That is
+# output, not the suite: a generated `*_test.ts` there must not be run — or counted
+# as a failure — by `bun test`.
+[test]
+pathIgnorePatterns = ["projects/**"]

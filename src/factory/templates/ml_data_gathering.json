@@ -1,0 +1,19 @@
+{
+  "name": "ML Data Gathering",
+  "id": "ml-data-gather",
+  "template": "data-gathering-loop",
+  "cron": "daily",
+  "args": {
+    "target_domain": "ai-research-papers",
+    "keywords": ["LLM", "Agentic Workflow", "Reasoning"],
+    "output_format": "jsonl",
+    "storage_path": "data/ml_training_set/",
+    "max_pages_per_source": 50,
+    "deduplication": true,
+    "quality_filter": {
+      "min_citations": 5,
+      "required_sections": ["Abstract", "Conclusion"]
+    }
+  },
+  "description": "Daily gathering of high-quality research papers and documentation for ML task specialization training."
+}

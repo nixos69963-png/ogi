@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es2023",
+    "lib": ["es2023", "dom"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "verbatimModuleSyntax": true,
+    "types": ["node"],
+    "paths": {
+      "#core/*": ["./src/core/*"],
+      "#tools/*": ["./src/tools/*"],
+      "#factory/*": ["./src/factory/*"],
+      "#guard/*": ["./src/guard/*"],
+      "#browser/*": ["./src/browser/*"],
+      "#mcp/*": ["./src/mcp/*"],
+      "#ui/*": ["./src/ui/*"],
+      "#tui/*": ["./src/tui/*"]
+    }
+  },
+  "include": ["setup.ts", "bin/**/*.ts", "src/**/*.ts", "test/**/*.ts"]
+}

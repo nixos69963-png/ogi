@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# local secrets (the example file is documentation, not a secret)
+.env
+.env.*
+!.env.example
+
+# the agent's own working state
+.agent/
+.factory/
+.test-tmp/
+tmp/
+projects/
+
+# reference checkouts kept for reading, never imported
+resources/
+
+# logs and OS noise
+*.log
+.DS_Store
+Thumbs.db

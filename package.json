@@ -1,0 +1,35 @@
+{
+  "name": "agent-cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first factory agent: an Ollama-driven CLI that runs work through typed stations, real files and a real browser.",
+  "engines": {
+    "node": ">=24"
+  },
+  "bin": {
+    "agent": "bin/agent.ts",
+    "ogi": "bin/agent.ts"
+  },
+  "imports": {
+    "#core/*": "./src/core/*",
+    "#tools/*": "./src/tools/*",
+    "#guard/*": "./src/guard/*",
+    "#factory/*": "./src/factory/*",
+    "#browser/*": "./src/browser/*",
+    "#mcp/*": "./src/mcp/*",
+    "#ui/*": "./src/ui/*",
+    "#tui/*": "./src/tui/*"
+  },
+  "scripts": {
+    "agent": "bun bin/agent.ts",
+    "setup": "bun setup.ts",
+    "test": "bun test",
+    "check": "bun run typecheck && bun test",
+    "typecheck": "bun ../node_modules/typescript/bin/tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@opentui/core": "^0.6.8",
+    "@opentui/core-win32-x64": "0.6.8"
+  }
+}
